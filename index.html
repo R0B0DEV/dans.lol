@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Dan's</title>
+		<link rel="icon" type="image/x-icon" href="favicon2.png">
+		<link rel="stylesheet" href="styles.css">
+		<script>
+			function navToggle(){
+				let nav = document.getElementById('links')
+				nav.classList.toggle('nav2')
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		
+		<nav>
+			<!-- <input type="checkbox" id="test"> -->
+			<div id="links" class="nav1">
+				<a href="#">Home</a>
+				<a href="#">Posts</a>
+				<a href="#">GitHub</a>
+			</div>
+			
+		
+			<div id="scrollBlock">
+				<p id="scroll">Welcome to my websie!</p>
+			</div>
+			<div id="logo" onclick="navToggle()">
+				<img src="logo.png" alt="logo">
+			</div>
+		</nav>
+
+
+		<div class="content">
+			<h2>About Me</h2>
+		</div>
+
+	</body>
+
+</html>

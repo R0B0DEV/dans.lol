@@ -1,0 +1,236 @@
+/** main font for the page**/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+
+/** pixelated font for the scroll text **/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+:root{
+	--nav: #5dd3d3;
+
+
+}
+
+@media (prefers-color-scheme: light){
+	:root{
+		--background: #e4e6e6;
+		--text: black;
+		--background-block:white;
+		--main-color: #45c855; /*#5ecf6b;*/
+		--h1-yellow: #c9df06;
+		--link: #58c4c4;
+		--chat: black;
+		--scroll: #A0F392; /**#c6c6c6;**/
+	}
+}
+
+@media (prefers-color-scheme: dark){
+	:root{
+		--background: #1c1c1c;
+		--text: white;
+		--background-block: #292a2a;
+		--main-color: #54f467;
+		--h1-yellow:yellow;
+		--link:#5dd3d3;
+		--chat: white;
+		--scroll: #8cd07f;
+	}
+
+	#logo img{
+		filter: brightness(4%);
+	}
+}
+/** for small screens **/
+@media (max-width:600px){
+	#logo:active{
+		border: inset;	
+	}
+
+	.nav1{
+		flex: 5;
+	}
+
+	.nav2{
+		flex: 0;
+	}
+}
+
+/** for big screens**/
+@media (min-width: 600px){
+	
+
+}
+
+
+
+::selection{
+	color: var(--background-block);
+	background-color:var(--main-color);
+}
+
+
+body{
+	background-color:var(--background);
+	color: var(--text);
+	font-family: 'Source Code Pro', monospace;
+	margin:0px;
+
+
+}
+
+
+a{
+	color: var(--link)
+}
+a:hover{
+	color: white;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	background-color: var(--background-block);
+	border-style: outset;
+	border-color: var(--main-color);
+	margin: 5px;
+
+}
+
+#logo{
+	padding: 5px;
+	background-color: var(--main-color)
+}
+
+#logo img{
+	height: 40px;
+	width: auto;
+	
+}
+
+nav #links{
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	transition: 1s;
+}
+
+
+nav a, nav h1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding:5px;
+	font-size: 25px;
+}
+
+nav a{
+	text-align: center;
+	text-decoration: none;
+	color: var(--main-color);
+}
+
+nav a:hover{
+	background-color: var(--main-color);
+	color: var(--background-block);
+	transition: 0.2s;
+}
+
+
+nav h1{
+	margin-left: auto;
+	background-image:linear-gradient(to top, var(--main-color), var(--h1-yellow));
+	border-left: outset;
+	border-color: var(--main-color);
+	color: var(--background-block);
+
+}
+
+
+div.content{
+	border-style: outset;
+	margin-bottom: 5px;
+	background-color:var(--background-block);
+	border-color: var(--main-color);
+	margin: 20px;
+
+} 
+
+div.content h2{
+	text-align: center;
+	background-color: var(--main-color);
+	color: var(--background-block);
+	margin-top:0px;
+}
+
+
+div.content p, div.content h3, div.content h4{
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+
+div.content h3, div.content h4{
+	color: var(--main-color);
+	text-decoration: underline;
+	margin-bottom:0px;
+}
+
+div.content p{
+	margin-top: 0px;
+	text-align: justify;
+}
+@keyframes scroll {
+	0%   { transform: translate(-100%, 0); }
+	100% { transform: translate(0, 0); }
+}
+
+
+#scroll{
+	display: inline-block;
+	padding-left: 100%;
+	animation: scroll 10s linear reverse infinite;
+	white-space: nowrap;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+#scrollBlock{
+	background-color:var(--scroll);
+	border-style: inset;
+	border-color:var(--main-color);
+	overflow:hidden;
+	font-family: 'Press Start 2P', cursive;
+	padding-left: auto;
+	flex: 1;
+
+}
+
+
+
+
+@keyframes nav{
+	0%{
+		width: 0px;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+
+/**
+this will be to replace the js solution of showing/hiding the nav bar, works with checkmark
+
+#test{
+	opacity: 0;
+	cursor: pointer;
+}
+
+#test:checked + #links{
+	flex: 10
+
+}
+**/
+
+
+
