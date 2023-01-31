@@ -42,7 +42,7 @@
 	}
 }
 /** for small screens **/
-@media (max-width:600px){
+@media (max-device-width:600px){
 	#logo:active{
 		border: inset;	
 	}
@@ -57,7 +57,7 @@
 }
 
 /** for big screens**/
-@media (min-width: 600px){
+@media (min-device-width: 600px){
 	
 
 }
