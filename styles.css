@@ -48,17 +48,25 @@
 	}
 
 	.nav1{
-		flex: 5;
+		flex: 9;
 	}
 
 	.nav2{
 		flex: 0;
 	}
+
+	div.content{
+		margin: 20px;
+
+	}
 }
 
 /** for big screens**/
 @media (min-device-width: 600px){
-	
+	div.content{
+		margin: 50px;
+
+	}
 
 }
 
@@ -149,8 +157,7 @@ div.content{
 	margin-bottom: 5px;
 	background-color:var(--background-block);
 	border-color: var(--main-color);
-	margin: 20px;
-
+	
 } 
 
 div.content h2{
@@ -205,17 +212,6 @@ div.content p{
 }
 
 
-
-
-@keyframes nav{
-	0%{
-		width: 0px;
-	}
-
-	100%{
-		width: 100%;
-	}
-}
 
 /**
 this will be to replace the js solution of showing/hiding the nav bar, works with checkmark
