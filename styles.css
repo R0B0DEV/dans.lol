@@ -42,7 +42,7 @@
 	}
 }
 /** for small screens **/
-@media (max-device-width:600px){
+@media (max-device-width:800px){
 	#logo:active{
 		border: inset;	
 	}
@@ -93,7 +93,6 @@ nav{
 	border-style: outset;
 	border-color: var(--main-color);
 	margin: 5px;
-
 }
 
 #logo{
